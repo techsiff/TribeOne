@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/app_header_gcp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/group_name_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/margin5"
+                android:gravity="center"
+                android:text="@string/community_title"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font18"
+                android:textStyle="bold"
+                android:lines="1"
+                android:ellipsize="end"
+                tools:ignore="RelativeOverlap" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/app_header_gcp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/community_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin5"
+                android:layout_marginRight="@dimen/margin5"
+                tools:itemCount="2"
+                tools:listitem="@layout/item_discussion" />
+
+            <TextView
+                android:id="@+id/no_discussion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="No new post available"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/font20"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/MyFloatingActionButton"
+        android:layout_marginBottom="@dimen/margin35"
+        android:layout_marginEnd="@dimen/margin20"
+        android:src="@drawable/ic_post_add"
+        android:tint="@null"
+        android:tintMode="src_in"
+        app:backgroundTint="@color/colorAccent"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:maxImageSize="40dp"
+        app:useCompatPadding="true"
+        tools:ignore="ContentDescription" />
+</androidx.constraintlayout.widget.ConstraintLayout>

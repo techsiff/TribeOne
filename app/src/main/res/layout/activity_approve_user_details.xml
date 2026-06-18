@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.AddEducationVideoActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/app_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/margin5"
+                android:gravity="center"
+                android:text="User Details"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font20"
+                android:textStyle="bold"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageView
+                android:id="@+id/deleteUser"
+                android:layout_width="@dimen/margin30"
+                android:layout_height="@dimen/margin30"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/margin10"
+                android:src="@drawable/ic_delete" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/app_header">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/membership_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/margin25"
+                    android:gravity="center"
+                    android:text="Approve User Details"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/font14"
+                    android:textStyle="bold"
+                    tools:ignore="RelativeOverlap" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingVertical="@dimen/margin10"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin10"
+                        android:layout_weight="0.4"
+                        android:text="Name"
+                        android:textColor="@color/intro_title"
+                        android:textSize="@dimen/font14"
+                        tools:ignore="RelativeOverlap" />
+
+                    <TextView
+                        android:id="@+id/mu_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin10"
+                        android:layout_weight="0.6"
+                        android:text="Name"
+                        android:textColor="@color/intro_title"
+                        android:textSize="@dimen/font14"
+                        tools:ignore="RelativeOverlap" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingVertical="@dimen/margin10"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin10"
+                        android:layout_weight="0.4"
+                        android:text="Email"
+                        android:textColor="@color/intro_title"
+                        android:textSize="@dimen/font14"
+                        tools:ignore="RelativeOverlap" />
+
+                    <TextView
+                        android:id="@+id/mu_email"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin10"
+                        android:layout_weight="0.6"
+                        android:text="Email"
+                        android:textColor="@color/intro_title"
+                        android:textSize="@dimen/font14"
+                        tools:ignore="RelativeOverlap" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingVertical="@dimen/margin10"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin10"
+                        android:layout_weight="0.4"
+                        android:text="Phone Number"
+                        android:textColor="@color/intro_title"
+                        android:textSize="@dimen/font14"
+                        tools:ignore="RelativeOverlap" />
+
+                    <TextView
+                        android:id="@+id/mu_number"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin10"
+                        android:layout_weight="0.6"
+                        android:text="Number"
+                        android:textColor="@color/intro_title"
+                        android:textSize="@dimen/font14"
+                        tools:ignore="RelativeOverlap" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingVertical="@dimen/margin10"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin10"
+                        android:layout_weight="0.4"
+                        android:text="Request Date"
+                        android:textColor="@color/intro_title"
+                        android:textSize="@dimen/font14"
+                        tools:ignore="RelativeOverlap" />
+
+                    <TextView
+                        android:id="@+id/mu_dof_register"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin10"
+                        android:layout_weight="0.6"
+                        android:text="Number"
+                        android:textColor="@color/intro_title"
+                        android:textSize="@dimen/font14"
+                        tools:ignore="RelativeOverlap" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingVertical="@dimen/margin10"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin10"
+                        android:layout_weight="0.4"
+                        android:text="Referral Code"
+                        android:textColor="@color/intro_title"
+                        android:textSize="@dimen/font14"
+                        tools:ignore="RelativeOverlap" />
+
+                    <TextView
+                        android:id="@+id/mu_referral_code"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin10"
+                        android:layout_weight="0.6"
+                        android:text="Number"
+                        android:textColor="@color/intro_title"
+                        android:textSize="@dimen/font14"
+                        tools:ignore="RelativeOverlap" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingVertical="@dimen/margin10"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin10"
+                        android:layout_weight="0.4"
+                        android:text="Category"
+                        android:textColor="@color/intro_title"
+                        android:textSize="@dimen/font14"
+                        tools:ignore="RelativeOverlap" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spinner_category"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/margin45"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/margin10"
+                        android:layout_marginEnd="@dimen/margin5"
+                        android:layout_weight="0.6"
+                        android:background="@drawable/custom_spinner_background"
+                        android:popupBackground="@color/white"
+                        android:spinnerMode="dropdown" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingVertical="@dimen/margin10"
+                    android:visibility="gone"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin10"
+                        android:layout_weight="0.4"
+                        android:text="Status"
+                        android:textColor="@color/intro_title"
+                        android:textSize="@dimen/font14"
+                        tools:ignore="RelativeOverlap" />
+
+                    <TextView
+                        android:id="@+id/mu_status"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin10"
+                        android:layout_weight="0.6"
+                        android:text="Active"
+                        android:textColor="@color/intro_title"
+                        android:textSize="@dimen/font14"
+                        tools:ignore="RelativeOverlap" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingVertical="@dimen/margin10"
+                    android:gravity="center">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_approve_user"
+                        style="@style/MyCustomButton"
+                        android:layout_width="@dimen/margin140"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin5"
+                        android:background="@drawable/button_bg"
+                        android:letterSpacing="0"
+                        android:text="Approve"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font20"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_verify_user"
+                        style="@style/MyCustomButton"
+                        android:layout_width="@dimen/margin140"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin5"
+                        android:background="@drawable/button_bg"
+                        android:letterSpacing="0"
+                        android:text="Verify"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font20"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

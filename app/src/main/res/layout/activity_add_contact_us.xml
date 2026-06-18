@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/app_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/margin5"
+                android:gravity="center"
+                android:text="Add Contact Us"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font20"
+                android:textStyle="bold"
+                tools:ignore="RelativeOverlap" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/app_header">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin10"
+                    android:text="Add the contact us numbers by manually"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/font18"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/name_edit_fn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin40"
+                    android:layout_marginStart="@dimen/margin30"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:layout_marginEnd="@dimen/margin30"
+                    android:layout_marginBottom="@dimen/margin15"
+                    android:background="@drawable/edit_text_border"
+                    android:backgroundTint="@color/colorAccent"
+                    android:hint="@string/name_edit"
+                    android:inputType="textCapSentences"
+                    android:paddingStart="@dimen/margin10"
+                    android:textColor="@color/blue"
+                    android:textColorHint="@color/grey"
+                    android:textSize="@dimen/font16" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/name_edit_ln"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin40"
+                    android:layout_marginStart="@dimen/margin30"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:layout_marginEnd="@dimen/margin30"
+                    android:layout_marginBottom="@dimen/margin15"
+                    android:background="@drawable/edit_text_border"
+                    android:backgroundTint="@color/colorAccent"
+                    android:hint="@string/name_edit_ln"
+                    android:inputType="textCapSentences"
+                    android:paddingStart="@dimen/margin10"
+                    android:textColor="@color/blue"
+                    android:textColorHint="@color/grey"
+                    android:textSize="@dimen/font16" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/city_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin40"
+                    android:layout_marginStart="@dimen/margin30"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:layout_marginEnd="@dimen/margin30"
+                    android:layout_marginBottom="@dimen/margin15"
+                    android:background="@drawable/edit_text_border"
+                    android:backgroundTint="@color/colorAccent"
+                    android:hint="Location"
+                    android:inputType="textCapSentences"
+                    android:paddingStart="@dimen/margin10"
+                    android:textColor="@color/blue"
+                    android:textColorHint="@color/grey"
+                    android:textSize="@dimen/font16" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/phone_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin40"
+                    android:layout_marginStart="@dimen/margin30"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:layout_marginEnd="@dimen/margin30"
+                    android:layout_marginBottom="@dimen/margin15"
+                    android:background="@drawable/edit_text_border"
+                    android:backgroundTint="@color/colorAccent"
+                    android:hint="@string/phone_edit"
+                    android:inputType="phone"
+                    android:paddingStart="@dimen/margin10"
+                    android:textColor="@color/blue"
+                    android:textColorHint="@color/grey"
+                    android:textSize="@dimen/font16" />
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_add"
+                    style="@style/MyCustomButton"
+                    android:layout_width="@dimen/margin150"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/margin10"
+                    android:background="@drawable/button_bg"
+                    android:letterSpacing="0"
+                    android:text="@string/add_user_btn"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font20"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin50"
+                    android:text="OR"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/font20"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <LinearLayout
+                    android:id="@+id/up_down_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin20"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin10"
+                        android:text="Upload the contact us details"
+                        android:textColor="@color/blue"
+                        android:textSize="@dimen/font18"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/btn_upload"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin10"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_upload"
+                            style="@style/MyCustomButton"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="@dimen/margin5"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/button_bg"
+                            android:letterSpacing="0"
+                            android:text="@string/upload_user_btn"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font20"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_auth"
+    app:startDestination="@id/accountFragment">
+
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.siffmember.info.ui.fragment.AccountFragment"
+        tools:layout="@layout/fragment_account">
+        <action
+            android:id="@+id/action_account_oneFragment_to_twoFragment"
+            app:destination="@id/playListOneFragment" />
+        <action
+            android:id="@+id/action_account_oneFragment_to_sharedPlaylistOneFragment"
+            app:destination="@id/sharedPlaylistOneFragment" />
+        <action
+            android:id="@+id/action_account_oneFragment_to_settingsBackupFragment"
+            app:destination="@id/settingsBackupFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/playListOneFragment"
+        android:name="com.siffmember.info.ui.fragment.PlayListOneFragment"
+        tools:layout="@layout/fragment_palylist_one">
+        <action
+            android:id="@+id/action_account_twoFragment_to_threeFragment"
+            app:destination="@id/playListTwoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/playListTwoFragment"
+        android:name="com.siffmember.info.ui.fragment.PlayListTwoFragment"
+        tools:layout="@layout/fragment_palylist_two">
+    </fragment>
+
+    <fragment
+        android:id="@+id/sharedPlaylistOneFragment"
+        android:name="com.siffmember.info.ui.fragment.SharedPlayListOneFragment"
+        tools:layout="@layout/fragment_shared_palylist_one">
+        <action
+            android:id="@+id/action_account_sharedPlaylistOneFragment_to_sharedPlaylistTwoFragment"
+            app:destination="@id/sharedPlaylistTwoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/sharedPlaylistTwoFragment"
+        android:name="com.siffmember.info.ui.fragment.SharedPlaylistTwoFragment"
+        tools:layout="@layout/fragment_palylist_two">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingsBackupFragment"
+        android:name="com.siffmember.info.ui.fragment.SettingsBackupFragment"
+        tools:layout="@layout/fragment_settings_backup">
+
+    </fragment>
+
+</navigation>

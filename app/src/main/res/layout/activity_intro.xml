@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.activity.IntroActivity">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:id="@+id/app_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin10"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSignup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="@dimen/margin10"
+            android:layout_marginRight="@dimen/margin10"
+            android:backgroundTint="@color/white_75"
+            android:text="Sign Up"
+            android:textAllCaps="false"
+            android:textColor="@color/btn_boarder"
+            android:textSize="@dimen/font18"
+            app:cornerRadius="@dimen/margin5"
+            app:strokeColor="@color/black"
+            app:strokeWidth="@dimen/strokeWidth" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="@dimen/margin10"
+            android:layout_marginRight="@dimen/margin10"
+            android:backgroundTint="@color/white_75"
+            android:text="Sign In"
+            android:textAllCaps="false"
+            android:textColor="@color/btn_boarder"
+            android:textSize="@dimen/font18"
+            app:cornerRadius="@dimen/margin5"
+            app:strokeColor="@color/black"
+            app:strokeWidth="@dimen/strokeWidth" />
+
+    </RelativeLayout>
+
+    <!-- ViewPager -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/introViewPager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@id/app_header"
+        app:layout_constraintBottom_toTopOf="@id/ar_indicator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Indicator -->
+    <com.siffmember.info.ui.view.indicator.ARIndicatorView
+        android:id="@+id/ar_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin10"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/introViewPager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:number_of_indicators="5"
+        app:indicator_size="20"
+        app:indicator_color="@color/grey"
+        app:selected_color="@color/colorPrimary" />
+
+    <!-- Enter Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnEnter"
+        style="@style/MyCustomButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin10"
+        android:text="Enter"
+        android:textSize="@dimen/font20"
+        android:textAllCaps="false"
+        android:padding="@dimen/margin10"
+        app:layout_constraintTop_toBottomOf="@id/ar_indicator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Terms text -->
+    <LinearLayout
+        android:id="@+id/introBottomLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/btnEnter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/textDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin10"
+            android:text="@string/terms_text"
+            android:textSize="@dimen/font14"
+            android:textColor="@color/intro_desc"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

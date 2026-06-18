@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin10"
+            android:text="Select categroy"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/font20"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinner_category1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin40"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin15"
+            android:background="@drawable/custom_spinner_background"
+            android:gravity="left"
+            android:paddingStart="8dp"
+            android:popupBackground="@color/white"
+            android:spinnerMode="dropdown" />
+
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinner_category2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin40"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin15"
+            android:background="@drawable/custom_spinner_background"
+            android:gravity="left"
+            android:paddingStart="8dp"
+            android:popupBackground="@color/white"
+            android:spinnerMode="dropdown" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_apply_filter"
+            style="@style/MyCustomButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin15"
+            android:background="@drawable/button_bg"
+            android:letterSpacing="0"
+            android:text="Apply Filter"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font20"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

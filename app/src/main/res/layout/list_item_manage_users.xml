@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin4"
+    android:background="@color/bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/margin35"
+            android:layout_height="@dimen/margin35"
+            android:layout_margin="@dimen/margin10"
+            android:src="@drawable/icon_default_user_image" />
+
+        <LinearLayout
+            android:id="@+id/users_ll"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/margin5"
+            android:layout_marginTop="@dimen/margin5"
+            android:layout_marginBottom="@dimen/margin5"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin5"
+                android:text="Name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font14" />
+
+            <TextView
+                android:id="@+id/user_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin5"
+                android:layout_marginTop="@dimen/margin2"
+                android:text="Number"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/font13" />
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/delete_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:src="@drawable/ic_delete" />
+    </LinearLayout>
+</LinearLayout>
+
+

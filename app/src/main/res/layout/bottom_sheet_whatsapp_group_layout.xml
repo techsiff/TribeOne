@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin10"
+            android:text="How to Join SIFF Community"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/font15"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin10"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="You can join WhatsApp group of SIFF from links below and you can talk to a First Level Counsellor in that group."
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/font14"
+            android:textStyle="normal" />
+
+        <LinearLayout
+            android:id="@+id/btn_group1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin5"
+                android:background="@drawable/button_bg_whatsapp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin5">
+
+                <ImageView
+                    android:layout_width="@dimen/margin25"
+                    android:layout_height="@dimen/margin25"
+                    android:layout_margin="@dimen/margin5"
+                    android:src="@drawable/ic_groups_white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/margin5"
+                    android:text="SIFF Temp Group"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/font14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin5"
+                    android:text="Link to join the WhatsApp Temp Group. "
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/font13" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/margin5"
+            android:layout_marginBottom="@dimen/margin5"
+            android:background="@color/colorPrimary" />
+
+        <LinearLayout
+            android:id="@+id/btn_group2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin5"
+                android:background="@drawable/button_bg_telegram"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin5">
+
+                <ImageView
+                    android:layout_width="@dimen/margin25"
+                    android:layout_height="@dimen/margin25"
+                    android:layout_margin="@dimen/margin5"
+                    android:src="@drawable/ic_groups_white" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/margin5"
+                    android:text="SIFF Activism Group"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/font14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin5"
+                    android:text="If you want to do activism to change laws, then join this “No Help, Unlimited Campaign” group (No help will be given in this group)."
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/font13" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/margin5"
+            android:layout_marginBottom="@dimen/margin5"
+            android:background="@color/colorPrimary" />
+
+        <LinearLayout
+            android:id="@+id/btn_group3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin5"
+                android:background="@drawable/button_bg_whatsapp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin5">
+
+                <ImageView
+                    android:layout_width="@dimen/margin25"
+                    android:layout_height="@dimen/margin25"
+                    android:layout_margin="@dimen/margin5"
+                    android:src="@drawable/ic_groups_white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/margin5"
+                    android:text="SIFF Special group for Parents and Siblings"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/font14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin5"
+                    android:text="If you are a woman wanting to join fight to protect men, protect your brother or male relative or a male friend, please join this group."
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/font13" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/margin5"
+            android:layout_marginBottom="@dimen/margin5"
+            android:background="@color/colorPrimary" />
+
+        <LinearLayout
+            android:id="@+id/btn_group4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin5"
+                android:background="@drawable/button_bg_whatsapp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin5">
+
+                <ImageView
+                    android:layout_width="@dimen/margin25"
+                    android:layout_height="@dimen/margin25"
+                    android:layout_margin="@dimen/margin5"
+                    android:src="@drawable/ic_groups_white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/margin5"
+                    android:text="SIFF NRI WhatsApp Group"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/font14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin5"
+                    android:text="SIFF WhatsApp Groups for NRIs below."
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/font13" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/margin5"
+            android:layout_marginBottom="@dimen/margin5"
+            android:background="@color/colorPrimary" />
+
+        <LinearLayout
+            android:id="@+id/btn_group5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin5"
+                android:background="@drawable/button_bg_whatsapp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin5">
+
+                <ImageView
+                    android:layout_width="@dimen/margin25"
+                    android:layout_height="@dimen/margin25"
+                    android:layout_margin="@dimen/margin5"
+                    android:src="@drawable/ic_groups_white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/margin5"
+                    android:text="SIFF-Appeals-Group"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/font14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin5"
+                    android:text="If you are banned accidentally or due to misunderstanding with an admin, join this group below to appeal."
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/font13" />
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/margin5"
+            android:layout_marginBottom="@dimen/margin5"
+            android:background="@color/colorPrimary" />
+
+        <LinearLayout
+            android:id="@+id/btn_group6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin5"
+                android:background="@drawable/button_bg_telegram"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin5">
+
+                <ImageView
+                    android:layout_width="@dimen/margin25"
+                    android:layout_height="@dimen/margin25"
+                    android:layout_margin="@dimen/margin5"
+                    android:src="@drawable/ic_groups_white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/margin5"
+                    android:text="SIFF Telegram Casual Group"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/font14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin5"
+                    android:text="Link to join the Telegram SIFF Casual Group. "
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/font13" />
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin5"
+            android:layout_marginBottom="@dimen/margin5"
+            android:background="@color/colorPrimary" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

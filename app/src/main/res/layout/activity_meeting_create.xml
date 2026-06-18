@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/app_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/margin5"
+                android:gravity="center"
+                android:text="@string/meeting_new_title"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font20"
+                android:textStyle="bold"
+                tools:ignore="RelativeOverlap" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/btnCreateMeetingLL"
+            android:layout_below="@+id/app_header">
+
+            <RelativeLayout
+                android:id="@+id/community_rl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/meeting_title_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin10"
+                        android:background="@drawable/notes_edit_text_border"
+                        android:backgroundTint="@color/colorAccent"
+                        android:gravity="top|start"
+                        android:hint="Meeting Title"
+                        android:imeOptions="actionDone"
+                        android:inputType="textMultiLine|textCapSentences"
+                        android:minLines="1"
+                        android:paddingStart="@dimen/margin10"
+                        android:scrollbars="vertical"
+                        android:textColor="@color/blue"
+                        android:textColorHint="@color/grey"
+                        android:textSize="@dimen/font14"
+                        tools:ignore="RtlSymmetry" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/meeting_agenda_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin10"
+                        android:background="@drawable/notes_edit_text_border"
+                        android:backgroundTint="@color/colorAccent"
+                        android:gravity="top|start"
+                        android:hint="Meeting Agenda"
+                        android:imeOptions="actionDone"
+                        android:inputType="textMultiLine|textCapSentences"
+                        android:minLines="1"
+                        android:paddingStart="@dimen/margin10"
+                        android:scrollbars="vertical"
+                        android:textColor="@color/blue"
+                        android:textColorHint="@color/grey"
+                        android:textSize="@dimen/font14"
+                        tools:ignore="RtlSymmetry" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin10"
+                        android:background="@drawable/notes_edit_text_border"
+                        android:backgroundTint="@color/colorAccent"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:gravity="top|start"
+                        android:hint="Select Date"
+                        android:imeOptions="actionDone"
+                        android:inputType="textMultiLine|textCapSentences"
+                        android:minLines="1"
+                        android:paddingStart="@dimen/margin10"
+                        android:scrollbars="vertical"
+                        android:textColor="@color/blue"
+                        android:textColorHint="@color/grey"
+                        android:textSize="@dimen/font14"
+                        tools:ignore="RtlSymmetry" />
+
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin10"
+                        android:background="@drawable/notes_edit_text_border"
+                        android:backgroundTint="@color/colorAccent"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:gravity="top|start"
+                        android:hint="Select Time"
+                        android:imeOptions="actionDone"
+                        android:inputType="textMultiLine|textCapSentences"
+                        android:minLines="1"
+                        android:paddingStart="@dimen/margin10"
+                        android:scrollbars="vertical"
+                        android:textColor="@color/blue"
+                        android:textColorHint="@color/grey"
+                        android:textSize="@dimen/font14"
+                        tools:ignore="RtlSymmetry" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin10"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:id="@+id/btnAddMembers"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="@dimen/margin5"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/button_bg_boarder"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/margin20"
+                                android:layout_height="@dimen/margin20"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/ic_users_settings"
+                                android:visibility="gone"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:text="Add Users"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/font14" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/btnSelectCategory"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="@dimen/margin5"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/button_bg_boarder"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/margin20"
+                                android:layout_height="@dimen/margin20"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/ic_users_settings"
+                                android:visibility="gone"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:text="Select Category"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/font14" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin10"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:id="@+id/btnUploadMembers"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="@dimen/margin5"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/button_bg_boarder"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/margin20"
+                                android:layout_height="@dimen/margin20"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/ic_users_settings"
+                                android:visibility="gone"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:text="Upload Users"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/font14" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/btnSelectGroups"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="@dimen/margin5"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/button_bg_boarder"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/margin20"
+                                android:layout_height="@dimen/margin20"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/ic_users_settings"
+                                android:visibility="gone"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:text="Select Groups"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/font14" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin10"
+                        android:layout_marginBottom="@dimen/margin15"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:id="@+id/btnSelectTags"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="@dimen/margin5"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/button_bg_boarder"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/margin20"
+                                android:layout_height="@dimen/margin20"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/ic_users_settings"
+                                android:visibility="gone"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:text="Select Tags"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/font14" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="@dimen/margin5"
+                            android:layout_weight="0.5"
+                            android:visibility="gone"
+                            android:background="@drawable/button_bg_boarder"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/margin20"
+                                android:layout_height="@dimen/margin20"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/ic_users_settings"
+                                android:visibility="gone"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:text="Select Groups"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/font14" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:id="@+id/btnTotalUsers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="@dimen/margin10">
+
+                        <TextView
+                            android:id="@+id/totalUsersTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/margin10"
+                            android:text="Total Users Added: "
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/font16" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/ic_arrow_forward_gray"
+                            tools:ignore="ContentDescription" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/btnCreateMeetingLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/margin5"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnCreateMeeting"
+                style="@style/MyCustomButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin20"
+                android:layout_marginRight="@dimen/margin20"
+                android:background="@drawable/button_bg"
+                android:letterSpacing="0"
+                android:text="Create Meeting"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font20" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

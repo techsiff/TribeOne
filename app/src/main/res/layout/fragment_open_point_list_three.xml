@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/add_op_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin20"
+            android:text=""
+            android:textColor="@color/blue"
+            android:textSize="@dimen/font20"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/desc_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/margin10"
+            android:layout_marginTop="@dimen/margin20"
+            android:layout_marginEnd="@dimen/margin10"
+            android:layout_marginBottom="@dimen/margin10"
+            android:background="@drawable/notes_edit_text_border"
+            android:backgroundTint="@color/colorAccent"
+            android:gravity="top|start"
+            android:hint="Description"
+            android:imeOptions="actionDone"
+            android:inputType="textMultiLine|textCapSentences"
+            android:minLines="1"
+            android:paddingStart="@dimen/margin10"
+            android:scrollbars="vertical"
+            android:textColor="@color/blue"
+            android:textColorHint="@color/grey"
+            android:textSize="@dimen/font16"
+            tools:ignore="RtlSymmetry" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/wd_edit_ln"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/margin10"
+            android:layout_marginTop="@dimen/margin20"
+            android:layout_marginEnd="@dimen/margin10"
+            android:layout_marginBottom="@dimen/margin10"
+            android:background="@drawable/notes_edit_text_border"
+            android:backgroundTint="@color/colorAccent"
+            android:gravity="top|start"
+            android:hint="Who will do it?"
+            android:imeOptions="actionDone"
+            android:inputType="textMultiLine|textCapSentences"
+            android:minLines="1"
+            android:paddingStart="@dimen/margin10"
+            android:scrollbars="vertical"
+            android:textColor="@color/blue"
+            android:textColorHint="@color/grey"
+            android:textSize="@dimen/font16"
+            tools:ignore="RtlSymmetry" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/remarks_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/margin10"
+            android:layout_marginTop="@dimen/margin20"
+            android:layout_marginEnd="@dimen/margin10"
+            android:layout_marginBottom="@dimen/margin10"
+            android:background="@drawable/notes_edit_text_border"
+            android:backgroundTint="@color/colorAccent"
+            android:gravity="top|start"
+            android:hint="Remarks"
+            android:imeOptions="actionDone"
+            android:inputType="textMultiLine|textCapSentences"
+            android:minLines="1"
+            android:paddingStart="@dimen/margin10"
+            android:scrollbars="vertical"
+            android:textColor="@color/blue"
+            android:textColorHint="@color/grey"
+            android:textSize="@dimen/font16"
+            tools:ignore="RtlSymmetry" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_op_add"
+            style="@style/MyCustomButton"
+            android:layout_width="@dimen/margin150"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin20"
+            android:background="@drawable/button_bg"
+            android:text="@string/add_user_btn"
+            android:letterSpacing="0"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font20"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_op_close"
+            style="@style/MyCustomButton"
+            android:layout_width="@dimen/margin150"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin20"
+            android:background="@drawable/button_bg"
+            android:text="@string/close_op_btn"
+            android:letterSpacing="0"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font20"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

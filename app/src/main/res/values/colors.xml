@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#079A4A</color>
+    <color name="colorPrimaryLight">#07C760</color>
+    <color name="colorPrimaryDark">#079A4A</color>
+    <color name="colorAccent">#EE7103</color>
+    <color name="colorAccent1">#FA9822</color>
+    <color name="colorAccent2">#F4D492</color>
+    <color name="blue">#1F4C86</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray">#7C7272</color>
+    <color name="dark_grey">#5A5A5A</color>
+    <color name="red">#d32f2f</color>
+    <color name="youtube">#FF0000</color>
+    <color name="telegram">#229ED9</color>
+    <color name="grey">#a9a9a9</color>
+    <color name="transparent">#00000000</color>
+    <color name="trans">#90000000</color>
+    <color name="bg">#E8ECF6</color>
+    <color name="endcolors">#F8E4E1</color>
+    <color name="half_white">#E5E5EA</color>
+    <color name="chat_sent_background">#1F4C86</color>  <!-- Blue for sent messages -->
+    <color name="chat_received_background">#E5E5EA</color>  <!-- Light gray for received messages -->
+    <color name="selected_item_bg">#95FA9822</color>
+    <color name="white_75">#BFFFFFFF</color>
+    <color name="btn_boarder">#131313</color>
+    <color name="intro_title">#0A140A</color>
+    <color name="edit_text">#848984</color>
+    <color name="edit_text_stroke">#000000</color>
+    <color name="account_title">#7E807F</color>
+    <color name="tp_txt">#999B98</color>
+    <color name="intro_desc">#848984</color>
+</resources>

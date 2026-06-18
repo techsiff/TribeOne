@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/margin80"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/margin5">
+
+    <FrameLayout
+        android:layout_width="@dimen/margin70"
+        android:layout_height="@dimen/margin70">
+
+        <ImageView
+            android:id="@+id/fileThumb"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"/>
+
+        <ImageView
+            android:id="@+id/removeFile"
+            android:layout_width="@dimen/margin20"
+            android:layout_height="@dimen/margin20"
+            android:layout_gravity="end"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"/>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/fileName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:textSize="@dimen/font10"
+        android:textColor="@color/intro_title"/>
+
+</LinearLayout>

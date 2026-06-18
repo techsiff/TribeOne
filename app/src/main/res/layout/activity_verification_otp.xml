@@ -1,0 +1,97 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/back_to_phone"
+            android:layout_width="@dimen/margin50"
+            android:layout_height="@dimen/margin50"
+            android:padding="@dimen/margin5"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_arrow_back_black" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/margin150"
+            android:layout_height="@dimen/margin150"
+            app:srcCompat="@drawable/siff_logo" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/otp_title"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font16" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/number_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin4"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/font18" />
+
+    </LinearLayout>
+
+
+    <com.siffmember.info.ui.view.otp.OtpTextView
+        android:id="@+id/otp_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/margin5"
+        android:textColor="@color/blue"
+        app:bar_active_color="@color/colorPrimary"
+        app:bar_enabled="true"
+        app:bar_error_color="@color/red"
+        app:bar_height="3dp"
+        app:bar_inactive_color="@color/blue"
+        app:bar_margin_bottom="0dp"
+        app:bar_margin_left="2dp"
+        app:bar_margin_right="2dp"
+        app:bar_success_color="@color/green"
+        app:box_margin="0dp"
+        app:height="@dimen/margin40"
+        app:hide_otp="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:length="6"
+        app:otp=""
+        app:otp_text_size="@dimen/font18"
+        app:width="@dimen/margin40" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnVerify"
+        style="@style/MyCustomButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/margin20"
+        android:layout_marginEnd="@dimen/margin20"
+        android:layout_marginTop="@dimen/margin50"
+        android:background="@drawable/button_bg"
+        android:text="Verify"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font20"
+        android:letterSpacing="0"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/otp_view"
+        tools:ignore="HardcodedText" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

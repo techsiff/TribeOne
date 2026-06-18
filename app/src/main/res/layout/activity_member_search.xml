@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.activity.MemberSearchActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/app_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/margin5"
+                android:gravity="center"
+                android:text="@string/member_search"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font20"
+                android:textStyle="bold"
+                tools:ignore="RelativeOverlap" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/search_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/app_header"
+            android:layout_marginTop="@dimen/margin10"
+            android:orientation="vertical"
+            android:padding="@dimen/margin5">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin10"
+                android:text="@string/search_number"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/font18"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/number_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/margin35"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/margin20"
+                    android:layout_weight="0.8"
+                    android:background="@drawable/edit_text_border"
+                    android:backgroundTint="@color/colorAccent"
+                    android:hint="Enter Phone Number Last 4 Digit"
+                    android:inputType="phone"
+                    android:maxLength="4"
+                    android:paddingStart="@dimen/margin10"
+                    android:textColor="@color/blue"
+                    android:textColorHint="@color/grey"
+                    android:textSize="@dimen/font16" />
+
+                <ImageView
+                    android:id="@+id/search_number"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/margin45"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/ic_arrow_circle_right" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin5"
+                android:text="OR"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/font20"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin10"
+                android:text="@string/search_name"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/font18"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/name_edit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin35"
+                android:layout_marginStart="@dimen/margin20"
+                android:layout_marginTop="@dimen/margin5"
+                android:layout_marginEnd="@dimen/margin20"
+                android:layout_marginBottom="@dimen/margin5"
+                android:background="@drawable/edit_text_border"
+                android:backgroundTint="@color/colorAccent"
+                android:hint="Name"
+                android:inputType="textCapSentences"
+                android:paddingStart="@dimen/margin10"
+                android:textColor="@color/blue"
+                android:textColorHint="@color/grey"
+                android:textSize="@dimen/font16" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/city_edit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin35"
+                android:layout_marginStart="@dimen/margin20"
+                android:layout_marginTop="@dimen/margin15"
+                android:layout_marginEnd="@dimen/margin20"
+                android:layout_marginBottom="@dimen/margin5"
+                android:background="@drawable/edit_text_border"
+                android:backgroundTint="@color/colorAccent"
+                android:hint="City"
+                android:inputType="textCapSentences"
+                android:paddingStart="@dimen/margin10"
+                android:textColor="@color/blue"
+                android:textColorHint="@color/grey"
+                android:textSize="@dimen/font16"
+                tools:ignore="RtlSymmetry" />
+
+            <ImageView
+                android:id="@+id/search_name_city"
+                android:layout_width="@dimen/margin50"
+                android:layout_height="@dimen/margin50"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/margin10"
+                android:src="@drawable/ic_arrow_circle_right"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/up_down_member"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/margin10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin10"
+            android:text="@string/member_title_excel"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/font18"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:id="@+id/btn_upload_member"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/margin5"
+                android:layout_weight="0.5"
+                android:background="@drawable/button_bg_boarder"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/margin20"
+                    android:layout_height="@dimen/margin20"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_upload"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/margin10"
+                    android:text="Upload"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font16" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/download_member"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/margin5"
+                android:layout_weight="0.5"
+                android:background="@drawable/button_bg_boarder"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/margin20"
+                    android:layout_height="@dimen/margin20"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_download"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/margin10"
+                    android:text="Download"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font16" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:id="@+id/btn_add_member"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/margin5"
+                android:layout_weight="0.5"
+                android:background="@drawable/button_bg_boarder"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/margin20"
+                    android:layout_height="@dimen/margin20"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_add_grey"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/margin5"
+                    android:text="AddMember"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font16" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_add_param"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/margin5"
+                android:layout_weight="0.5"
+                android:background="@drawable/button_bg_boarder"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/margin20"
+                    android:layout_height="@dimen/margin20"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_add_grey"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/margin5"
+                    android:text="AddParam"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font16" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

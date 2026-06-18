@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/add_member_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin10"
+            android:text="Select members"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/font20"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/user_search_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/notes_edit_text_border"
+            android:backgroundTint="@color/colorAccent"
+            android:layout_margin="@dimen/margin10"
+            android:gravity="top|start"
+            android:hint="Search name or number"
+            android:imeOptions="actionDone"
+            android:inputType="textMultiLine|textCapSentences"
+            android:minLines="1"
+            android:paddingStart="@dimen/margin10"
+            android:scrollbars="vertical"
+            android:textColor="@color/blue"
+            android:textColorHint="@color/grey"
+            android:textSize="@dimen/font16"
+            tools:ignore="RtlSymmetry" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinner_category"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin40"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin10"
+            android:background="@drawable/custom_spinner_background"
+            android:popupBackground="@color/white"
+            android:spinnerMode="dropdown" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/no_add_members"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin10"
+                android:text="No new members available to add"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/font20"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/users_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin5"
+                tools:itemCount="5"
+                tools:listitem="@layout/list_user_details" />
+
+            <LinearLayout
+                android:id="@+id/btn_add_member"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="@dimen/margin25"
+                android:background="@drawable/button_bg_done"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/nextOne_btn"
+                    android:layout_width="@dimen/margin60"
+                    android:layout_height="@dimen/margin60"
+                    android:padding="@dimen/margin5"
+                    android:src="@drawable/ic_done"
+                    tools:ignore="ContentDescription" />
+            </LinearLayout>
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

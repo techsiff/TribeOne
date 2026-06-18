@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin5"
+    card_view:cardBackgroundColor="@color/white"
+    card_view:cardCornerRadius="@dimen/margin10"
+    card_view:cardElevation="@dimen/margin3">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/margin10">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/intro_title"
+                android:text="tesgsdlfkkdl"
+                android:textSize="@dimen/font14" />
+
+            <TextView
+                android:id="@+id/tvUserId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/intro_desc"
+                android:text="tesgsdlfkkdl"
+                android:textSize="@dimen/font12" />
+
+            <TextView
+                android:id="@+id/tvStoryCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/intro_desc"
+                android:text="tesgsdlfkkdl"
+                android:textSize="@dimen/font12" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivDelete"
+            android:layout_width="@dimen/margin25"
+            android:layout_height="@dimen/margin25"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_delete" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

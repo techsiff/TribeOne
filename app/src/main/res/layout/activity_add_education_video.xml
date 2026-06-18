@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.AddEducationVideoActivity">
+
+    <RelativeLayout
+        android:id="@+id/app_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/margin5"
+            android:gravity="center"
+            android:text="@string/add_education"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font20"
+            android:textStyle="bold"
+            tools:ignore="RelativeOverlap" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/addVideoForm"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        android:descendantFocusability="beforeDescendants"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin10"
+                android:text="Select categroy title"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/font20"
+                android:textStyle="bold" />
+
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinner_category1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin45"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin15"
+                android:background="@drawable/custom_spinner_background"
+                android:gravity="left"
+                android:paddingStart="8dp"
+                android:popupBackground="@color/white"
+                android:spinnerMode="dropdown" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/category1_edit_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin15"
+                android:background="@drawable/notes_edit_text_border"
+                android:backgroundTint="@color/colorAccent"
+                android:gravity="top|start"
+                android:hint="Category Title"
+                android:imeOptions="actionDone"
+                android:inputType="textMultiLine|textCapSentences"
+                android:minLines="1"
+                android:paddingStart="@dimen/margin10"
+                android:scrollbars="vertical"
+                android:textColor="@color/blue"
+                android:textColorHint="@color/grey"
+                android:textSize="@dimen/font16"
+                android:visibility="gone"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinner_category2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin45"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin15"
+                android:background="@drawable/custom_spinner_background"
+                android:gravity="left"
+                android:paddingStart="8dp"
+                android:popupBackground="@color/white"
+                android:spinnerMode="dropdown" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/category2_edit_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin15"
+                android:background="@drawable/notes_edit_text_border"
+                android:backgroundTint="@color/colorAccent"
+                android:gravity="top|start"
+                android:hint="Sub Category Title"
+                android:imeOptions="actionDone"
+                android:inputType="textMultiLine|textCapSentences"
+                android:minLines="1"
+                android:paddingStart="@dimen/margin10"
+                android:scrollbars="vertical"
+                android:textColor="@color/blue"
+                android:textColorHint="@color/grey"
+                android:textSize="@dimen/font16"
+                android:visibility="gone"
+                tools:ignore="RtlSymmetry" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin10"
+                android:text="Enter the video details"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/font20"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/video_id_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/margin15"
+                android:background="@drawable/notes_edit_text_border"
+                android:backgroundTint="@color/colorAccent"
+                android:gravity="top|start"
+                android:hint="VideoId"
+                android:imeOptions="actionDone"
+                android:inputType="textMultiLine|textCapSentences"
+                android:minLines="1"
+                android:paddingStart="@dimen/margin10"
+                android:scrollbars="vertical"
+                android:textColor="@color/blue"
+                android:textColorHint="@color/grey"
+                android:textSize="@dimen/font16"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/video_title_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/margin15"
+                android:background="@drawable/notes_edit_text_border"
+                android:backgroundTint="@color/colorAccent"
+                android:gravity="top|start"
+                android:hint="VideoTitle"
+                android:imeOptions="actionDone"
+                android:inputType="textMultiLine|textCapSentences"
+                android:minLines="1"
+                android:paddingStart="@dimen/margin10"
+                android:scrollbars="vertical"
+                android:textColor="@color/blue"
+                android:textColorHint="@color/grey"
+                android:textSize="@dimen/font16"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/video_by_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/margin15"
+                android:background="@drawable/notes_edit_text_border"
+                android:backgroundTint="@color/colorAccent"
+                android:gravity="top|start"
+                android:hint="VideoBy"
+                android:imeOptions="actionDone"
+                android:inputType="textMultiLine|textCapSentences"
+                android:minLines="1"
+                android:paddingStart="@dimen/margin10"
+                android:scrollbars="vertical"
+                android:textColor="@color/blue"
+                android:textColorHint="@color/grey"
+                android:textSize="@dimen/font16"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/video_desc_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/margin15"
+                android:background="@drawable/notes_edit_text_border"
+                android:backgroundTint="@color/colorAccent"
+                android:gravity="top|start"
+                android:hint="Description"
+                android:imeOptions="actionDone"
+                android:inputType="textMultiLine|textCapSentences"
+                android:minLines="1"
+                android:paddingStart="@dimen/margin10"
+                android:scrollbars="vertical"
+                android:textColor="@color/blue"
+                android:textColorHint="@color/grey"
+                android:textSize="@dimen/font16"
+                tools:ignore="RtlSymmetry" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_add"
+                style="@style/MyCustomButton"
+                android:layout_width="@dimen/margin150"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin15"
+                android:background="@drawable/button_bg"
+                android:letterSpacing="0"
+                android:text="@string/add_user_btn"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font20"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

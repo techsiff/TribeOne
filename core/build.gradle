@@ -1,0 +1,40 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply from: '../dependencies.gradle'
+
+android {
+  compileSdkVersion versions.compileSdk
+
+  defaultConfig {
+    minSdkVersion versions.minSdk
+  }
+
+  sourceSets {
+    main.res.srcDirs = [
+            'src/main/res',
+    ]
+  }
+  namespace 'com.pierfrancescosoffritti.androidyoutubeplayer'
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+  kotlinOptions {
+    jvmTarget = '1.8'
+  }
+    lint {
+        targetSdk 36
+    }
+    testOptions {
+        targetSdk 36
+    }
+}
+
+dependencies {
+  testImplementation "junit:junit:$versions.junit"
+  androidTestImplementation "androidx.test:runner:$versions.runner"
+  androidTestImplementation "androidx.test.espresso:espresso-core:$versions.espressoCore"
+
+  api "androidx.lifecycle:lifecycle-runtime-ktx:$versions.androidxLifecycleRuntime"
+}

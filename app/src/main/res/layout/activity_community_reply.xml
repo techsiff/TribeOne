@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <!-- HEADER -->
+    <RelativeLayout
+        android:id="@+id/app_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/margin5"
+            android:gravity="center"
+            android:text="@string/post"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font20"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/deletePost"
+            android:layout_width="@dimen/margin30"
+            android:layout_height="@dimen/margin30"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin10"
+            android:src="@drawable/ic_delete_white" />
+    </RelativeLayout>
+
+
+    <!-- SCROLL AREA FOR POST CONTENT + COMMENTS TITLE -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/post_scroll_area"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/community_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <!-- YOUR CARD -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin8"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/margin5"
+                app:cardElevation="@dimen/margin4">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/titleTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="Discussion Title"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font14"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/contentTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin10"
+                        android:autoLink="web"
+                        android:linksClickable="true"
+                        android:text="This is the content of the discussion."
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font13" />
+
+                    <LinearLayout
+                        android:id="@+id/reply_ll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/margin20"
+                            android:layout_height="@dimen/margin20"
+                            android:layout_margin="@dimen/margin5"
+                            android:src="@drawable/ic_reply"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:id="@+id/reply_count_total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin5"
+                            android:text="2.5K"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font12"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <!-- COMMENTS TITLE -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/margin5"
+                    android:text="Comments"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font15"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/deleteComments"
+                    android:layout_width="@dimen/margin35"
+                    android:layout_height="@dimen/margin35"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/margin5"
+                    android:src="@drawable/ic_delete"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <!-- RECYCLER VIEW - WHATSAPP STYLE -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/community_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingStart="@dimen/margin5"
+        android:paddingEnd="@dimen/margin5"
+        android:paddingBottom="@dimen/margin5"
+        app:layout_constraintBottom_toTopOf="@id/reply_btn_ll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/post_scroll_area"
+        tools:itemCount="2"
+        tools:listitem="@layout/item_reply" />
+
+
+    <!-- INPUT BOX AT BOTTOM -->
+    <LinearLayout
+        android:id="@+id/reply_btn_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin10"
+        android:layout_margin="@dimen/margin5"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/community_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/notes_edit_text_border"
+                android:backgroundTint="@color/colorAccent"
+                android:gravity="top|start"
+                android:hint="@string/community_reply_edit"
+                android:imeOptions="actionDone"
+                android:inputType="textMultiLine|textCapSentences"
+                android:maxLength="550"
+                android:maxLines="7"
+                android:minLines="1"
+                android:paddingStart="@dimen/margin10"
+                android:paddingEnd="@dimen/margin5"
+                android:scrollbars="vertical"
+                android:textColor="@color/blue"
+                android:textColorHint="@color/grey"
+                android:textSize="@dimen/font14"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/char_counter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:paddingTop="4dp"
+                android:paddingEnd="@dimen/margin10"
+                android:text="0/550"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/font12" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/btn_post"
+            android:layout_width="@dimen/margin50"
+            android:layout_height="@dimen/margin50"
+            android:src="@drawable/ic_send" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

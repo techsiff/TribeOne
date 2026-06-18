@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin5"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.9"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/meeting_users"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin5"
+            android:text="Meeting Topic"
+            android:textColor="@color/intro_title"
+            android:textSize="@dimen/font14" />
+
+        <TextView
+            android:id="@+id/meeting_user_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin5"
+            android:text="Meeting Time"
+            android:textColor="@color/intro_desc"
+            android:textSize="@dimen/font13" />
+
+        <TextView
+            android:id="@+id/meeting_joinedEnd_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin5"
+            android:layout_marginTop="@dimen/margin2"
+            android:text="Organiser Name"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/font13" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ic_arrow_forward_gray"/>
+
+</LinearLayout>
+
+

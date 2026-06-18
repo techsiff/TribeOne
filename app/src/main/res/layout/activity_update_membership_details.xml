@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.AddEducationVideoActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/app_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/margin5"
+                android:gravity="center"
+                android:text="Update Membership Details"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font20"
+                android:textStyle="bold"
+                tools:ignore="RelativeOverlap" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/update_member_sv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/app_header">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/membership_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/margin10"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:gravity="center"
+                    android:text="Update Membership Details"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/font14"
+                    android:textStyle="bold"
+                    tools:ignore="RelativeOverlap" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin10"
+                    android:text="Name"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/font14"
+                    android:textStyle="bold"
+                    tools:ignore="RelativeOverlap" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/mu_name_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin10"
+                    android:background="@drawable/notes_edit_text_border"
+                    android:backgroundTint="@color/colorAccent"
+                    android:gravity="top|start"
+                    android:hint="Name"
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:minLines="1"
+                    android:paddingStart="@dimen/margin10"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/blue"
+                    android:textColorHint="@color/grey"
+                    android:textSize="@dimen/font14"
+                    tools:ignore="RtlSymmetry" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin10"
+                    android:text="Email Id"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/font14"
+                    android:textStyle="bold"
+                    tools:ignore="RelativeOverlap" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/mu_email_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin10"
+                    android:background="@drawable/notes_edit_text_border"
+                    android:backgroundTint="@color/colorAccent"
+                    android:gravity="top|start"
+                    android:hint="Email Id"
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:minLines="1"
+                    android:paddingStart="@dimen/margin10"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/blue"
+                    android:textColorHint="@color/grey"
+                    android:textSize="@dimen/font14"
+                    tools:ignore="RtlSymmetry" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin10"
+                    android:text="Address"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/font14"
+                    android:textStyle="bold"
+                    tools:ignore="RelativeOverlap" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/mu_address_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin10"
+                    android:background="@drawable/notes_edit_text_border"
+                    android:backgroundTint="@color/colorAccent"
+                    android:gravity="top|start"
+                    android:hint="Address"
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:minLines="1"
+                    android:paddingStart="@dimen/margin10"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/blue"
+                    android:textColorHint="@color/grey"
+                    android:textSize="@dimen/font14"
+                    tools:ignore="RtlSymmetry" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin10"
+                    android:text="PhoneNumber"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/font14"
+                    android:textStyle="bold"
+                    tools:ignore="RelativeOverlap" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/mu_phone_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin10"
+                    android:background="@drawable/notes_edit_text_border"
+                    android:backgroundTint="@color/colorAccent"
+                    android:gravity="top|start"
+                    android:hint="Phone number"
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:minLines="1"
+                    android:paddingStart="@dimen/margin10"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/blue"
+                    android:textColorHint="@color/grey"
+                    android:textSize="@dimen/font14"
+                    tools:ignore="RtlSymmetry" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin10"
+                    android:text="City"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/font14"
+                    android:textStyle="bold"
+                    tools:ignore="RelativeOverlap" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/mu_city_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin10"
+                    android:background="@drawable/notes_edit_text_border"
+                    android:backgroundTint="@color/colorAccent"
+                    android:gravity="top|start"
+                    android:hint="City"
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:minLines="1"
+                    android:paddingStart="@dimen/margin10"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/blue"
+                    android:textColorHint="@color/grey"
+                    android:textSize="@dimen/font14"
+                    tools:ignore="RtlSymmetry" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin10"
+                    android:text="Joining Date"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/font14"
+                    android:textStyle="bold"
+                    tools:ignore="RelativeOverlap" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/mu_DOJ_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin10"
+                    android:background="@drawable/notes_edit_text_border"
+                    android:backgroundTint="@color/colorAccent"
+                    android:gravity="top|start"
+                    android:hint="Joining Date"
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:minLines="1"
+                    android:paddingStart="@dimen/margin10"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/blue"
+                    android:textColorHint="@color/grey"
+                    android:textSize="@dimen/font14"
+                    tools:ignore="RtlSymmetry" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin10"
+                    android:text="CS1 Parameter"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/font14"
+                    android:textStyle="bold"
+                    tools:ignore="RelativeOverlap" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/mu_cs1_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin10"
+                    android:background="@drawable/notes_edit_text_border"
+                    android:backgroundTint="@color/colorAccent"
+                    android:gravity="top|start"
+                    android:hint="CS1 Parameter"
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:minLines="1"
+                    android:paddingStart="@dimen/margin10"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/blue"
+                    android:textColorHint="@color/grey"
+                    android:textSize="@dimen/font14"
+                    tools:ignore="RtlSymmetry" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin10"
+                    android:text="CS2"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/font14"
+                    android:textStyle="bold"
+                    tools:ignore="RelativeOverlap" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/mu_cs2_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin10"
+                    android:background="@drawable/notes_edit_text_border"
+                    android:backgroundTint="@color/colorAccent"
+                    android:gravity="top|start"
+                    android:hint="CS2"
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:minLines="1"
+                    android:paddingStart="@dimen/margin10"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/blue"
+                    android:textColorHint="@color/grey"
+                    android:textSize="@dimen/font14"
+                    tools:ignore="RtlSymmetry" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin10"
+                    android:text="CS3"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/font14"
+                    android:textStyle="bold"
+                    tools:ignore="RelativeOverlap" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/mu_cs3_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin10"
+                    android:background="@drawable/notes_edit_text_border"
+                    android:backgroundTint="@color/colorAccent"
+                    android:gravity="top|start"
+                    android:hint="CS3"
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:minLines="1"
+                    android:paddingStart="@dimen/margin10"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/blue"
+                    android:textColorHint="@color/grey"
+                    android:textSize="@dimen/font14"
+                    tools:ignore="RtlSymmetry" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin10"
+                    android:text="PR1 Parameter"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/font14"
+                    android:textStyle="bold"
+                    tools:ignore="RelativeOverlap" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/mu_pr1_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin10"
+                    android:background="@drawable/notes_edit_text_border"
+                    android:backgroundTint="@color/colorAccent"
+                    android:gravity="top|start"
+                    android:hint="PR1 Parameter"
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:minLines="1"
+                    android:paddingStart="@dimen/margin10"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/blue"
+                    android:textColorHint="@color/grey"
+                    android:textSize="@dimen/font14"
+                    tools:ignore="RtlSymmetry" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin10"
+                    android:text="PR2"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/font14"
+                    android:textStyle="bold"
+                    tools:ignore="RelativeOverlap" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/mu_pr2_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin10"
+                    android:background="@drawable/notes_edit_text_border"
+                    android:backgroundTint="@color/colorAccent"
+                    android:gravity="top|start"
+                    android:hint="PR2"
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:minLines="1"
+                    android:paddingStart="@dimen/margin10"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/blue"
+                    android:textColorHint="@color/grey"
+                    android:textSize="@dimen/font14"
+                    tools:ignore="RtlSymmetry" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin10"
+                    android:text="PR3"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/font14"
+                    android:textStyle="bold"
+                    tools:ignore="RelativeOverlap" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/mu_pr3_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin10"
+                    android:background="@drawable/notes_edit_text_border"
+                    android:backgroundTint="@color/colorAccent"
+                    android:gravity="top|start"
+                    android:hint="PR3"
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:minLines="1"
+                    android:paddingStart="@dimen/margin10"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/blue"
+                    android:textColorHint="@color/grey"
+                    android:textSize="@dimen/font14"
+                    tools:ignore="RtlSymmetry" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin10"
+                    android:text="LD1"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/font14"
+                    android:textStyle="bold"
+                    tools:ignore="RelativeOverlap" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/mu_LD1_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin10"
+                    android:background="@drawable/notes_edit_text_border"
+                    android:backgroundTint="@color/colorAccent"
+                    android:gravity="top|start"
+                    android:hint="LD1"
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:minLines="1"
+                    android:paddingStart="@dimen/margin10"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/blue"
+                    android:textColorHint="@color/grey"
+                    android:textSize="@dimen/font14"
+                    tools:ignore="RtlSymmetry" />
+
+                <LinearLayout
+                    android:id="@+id/btnUpdateLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_update"
+                        style="@style/MyCustomButton"
+                        android:layout_width="@dimen/margin150"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/margin10"
+                        android:background="@drawable/button_bg"
+                        android:letterSpacing="0"
+                        android:text="Update"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font20"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:ignore="MissingConstraints" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

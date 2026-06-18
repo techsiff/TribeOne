@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_auth"
+    app:startDestination="@id/openPointsOneFragment">
+
+    <fragment
+        android:id="@+id/openPointsOneFragment"
+        android:name="com.siffmember.info.ui.fragment.OpenPointListOneFragment"
+        android:label="fragment_send_otp"
+        tools:layout="@layout/fragment_open_point_list_one" >
+        <action
+            android:id="@+id/action_sendOneFragment_to_twoFragment"
+            app:destination="@id/openPointsTwoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/openPointsTwoFragment"
+        android:name="com.siffmember.info.ui.fragment.OpenPointListTwoFragment"
+        android:label="fragment_verification_otp"
+        tools:layout="@layout/fragment_open_point_list_two" >
+        <action
+            android:id="@+id/action_twoFragment_to_threeFragment"
+            app:destination="@id/openPointsThreeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/openPointsThreeFragment"
+        android:name="com.siffmember.info.ui.fragment.OpenPointListThreeFragment"
+        android:label="fragment_home_page"
+        tools:layout="@layout/fragment_open_point_list_three" />
+</navigation>

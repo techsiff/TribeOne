@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.CommunityMainActivity">
+
+    <LinearLayout
+        android:id="@+id/analyticLL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/app_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:gravity="center_vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/margin5"
+                android:text="Meeting Analytics Details"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font20"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/btnDeleteAnalytics"
+                android:layout_width="@dimen/margin30"
+                android:layout_height="@dimen/margin30"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/margin10"
+                android:src="@drawable/ic_delete" />
+        </RelativeLayout>
+        <ScrollView
+            android:id="@+id/analyticScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/meeting_title_ll"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:padding="@dimen/margin5">
+
+                <TextView
+                    android:id="@+id/meeting_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="@dimen/margin5"
+                    android:text=" "
+                    android:textColor="@color/intro_title"
+                    android:textSize="@dimen/font16"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/meeting_agenda"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="@dimen/margin5"
+                    android:text=" "
+                    android:textColor="@color/intro_desc"
+                    android:textSize="@dimen/font14"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/totalUsers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/margin5"
+                    android:text="Total Users"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/font16"
+                    android:textStyle="bold" />
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/pieChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin150" />
+
+                <LinearLayout
+                    android:id="@+id/listOfUserLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin5"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/joinedUser"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="Joined Users"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/font14"
+                            android:textStyle="bold" />
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/meeting_joined_user"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            tools:itemCount="10" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/nonJoinedUser"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="Non Joined Users"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/font14"
+                            android:textStyle="bold" />
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/meeting_non_joined_user"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            tools:itemCount="10" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+    <!-- App Header -->
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
