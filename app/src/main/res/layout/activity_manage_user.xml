@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/app_header_gcp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/headerTitleMU"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/margin5"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:text="Manage Users"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font18"
+                android:textStyle="bold"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageView
+                android:id="@+id/downloadUser"
+                android:layout_width="@dimen/margin30"
+                android:layout_height="@dimen/margin30"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/margin10"
+                android:src="@drawable/ic_file_download" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/registered_user_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/app_header_gcp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/margin10"
+                android:padding="@dimen/margin3"
+                android:weightSum="1">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/searchView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:background="@drawable/notes_edit_text_border"
+                    android:backgroundTint="@color/colorAccent"
+                    android:gravity="top|start"
+                    android:hint="Search user..."
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:minLines="1"
+                    android:paddingStart="@dimen/margin10"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/blue"
+                    android:textColorHint="@color/grey"
+                    android:textSize="@dimen/font16"
+                    tools:ignore="RtlSymmetry" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spinner_category"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/margin40"
+                    android:layout_weight="0.4"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/margin5"
+                    android:background="@drawable/custom_spinner_background_two"
+                    android:popupBackground="@color/white"
+                    android:spinnerMode="dropdown" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/users_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin10"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:text=""
+                android:textColor="@color/blue"
+                android:textSize="@dimen/font16"
+                android:textStyle="bold"
+                tools:ignore="RelativeOverlap" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/all_users_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin5"
+                android:layout_marginRight="@dimen/margin5"
+                tools:itemCount="5"
+                tools:listitem="@layout/list_item_manage_users" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

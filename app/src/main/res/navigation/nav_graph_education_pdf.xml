@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_education_pdf"
+    app:startDestination="@id/pdfOneFragment">
+
+    <fragment
+        android:id="@+id/pdfOneFragment"
+        android:name="com.siffmember.info.ui.fragment.PDFOneFragment"
+        tools:layout="@layout/fragment_pdf_one" >
+        <action
+            android:id="@+id/action_oneFragment_to_twoFragment"
+            app:destination="@id/pdfTwoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pdfTwoFragment"
+        android:name="com.siffmember.info.ui.fragment.PDFTwoFragment"
+        tools:layout="@layout/fragment_pdf_two" >
+        <action
+            android:id="@+id/action_twoFragment_to_threeFragment"
+            app:destination="@id/pdfThreeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pdfThreeFragment"
+        android:name="com.siffmember.info.ui.fragment.PDFThreeFragment"
+        tools:layout="@layout/fragment_pdf_three" />
+</navigation>

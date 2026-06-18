@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/app_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/margin5"
+            android:text="UserStory"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font20"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/btnStoryHistory"
+            android:layout_width="@dimen/margin30"
+            android:layout_height="@dimen/margin30"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin10"
+            android:visibility="gone"
+            android:src="@drawable/ic_call_history" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/margin5"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/app_header">
+
+        <RelativeLayout
+            android:id="@+id/selectUserRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/selectedUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin10"
+                android:shadowColor="#80018786"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="1"
+                android:text="Select User"
+                android:layout_alignParentStart="true"
+                android:textColor="@color/intro_title"
+                android:textSize="@dimen/font16"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_arrow_forward_gray"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin10"
+            android:shadowColor="#80018786"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="1"
+            android:text="Upload your story from a file (PDF, DOC)"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/font16"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/btnUploadFile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin10"
+            android:background="@drawable/dotted_boarder"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/margin60"
+                android:layout_height="@dimen/margin60"
+                android:layout_margin="@dimen/margin10"
+                android:src="@drawable/ic_upload_file" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin5"
+                android:shadowColor="#80018786"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="1"
+                android:text="Tap to upload a file"
+                android:textColor="@color/intro_title"
+                android:textSize="@dimen/font14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin5"
+                android:shadowColor="#80018786"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="1"
+                android:text="PDF, DOC"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/font15" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin5"
+                android:shadowColor="#80018786"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="1"
+                android:text="Max file size: 10MB"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/font12" />
+
+            <TextView
+                android:id="@+id/storyFileName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin5"
+                android:shadowColor="#80018786"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="1"
+                android:text=""
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/font13" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/oldStoryLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin10"
+                android:shadowColor="#80018786"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="1"
+                android:text="OR"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/font16"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin10"
+                android:shadowColor="#80018786"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="1"
+                android:text="Select your previous story"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/font16"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinner_old_story"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin45"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/margin30"
+                android:layout_marginTop="@dimen/margin5"
+                android:layout_marginEnd="@dimen/margin30"
+                android:layout_marginBottom="@dimen/margin15"
+                android:background="@drawable/custom_spinner_background"
+                android:gravity="left"
+                android:paddingStart="8dp"
+                android:popupBackground="@color/white"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin10"
+            android:shadowColor="#80018786"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="1"
+            android:text="Select any one questionnaire"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/font16"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinner_question"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin45"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/margin30"
+            android:layout_marginTop="@dimen/margin5"
+            android:layout_marginEnd="@dimen/margin30"
+            android:layout_marginBottom="@dimen/margin15"
+            android:background="@drawable/custom_spinner_background"
+            android:gravity="left"
+            android:paddingStart="8dp"
+            android:popupBackground="@color/white"
+            android:spinnerMode="dropdown" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnProceedLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin5"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/btnProceed"
+            style="@style/MyCustomButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin20"
+            android:layout_marginRight="@dimen/margin20"
+            android:background="@drawable/button_bg"
+            android:letterSpacing="0"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font20" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

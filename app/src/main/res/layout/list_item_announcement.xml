@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/announce_card_height"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/margin15"
+    app:cardElevation="@dimen/margin5"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@color/colorAccent1"
+            android:padding="@dimen/margin3"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin2"
+                tools:ignore="UseCompoundDrawables">
+
+                <TextView
+                    android:id="@+id/announce_date_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/margin10"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font11"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/delete_announce"
+                    android:layout_width="@dimen/margin20"
+                    android:layout_height="@dimen/margin20"
+                    android:layout_margin="@dimen/margin2"
+                    android:src="@drawable/ic_arrow_forward" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/announce_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin5"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/font13"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin3">
+
+            <TextView
+                android:id="@+id/announce_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin5"
+                android:autoLink="web"
+                android:linksClickable="true"
+                android:overScrollMode="always"
+                android:scrollbarStyle="insideOverlay"
+                android:scrollbars="vertical"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/font13" />
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+
+

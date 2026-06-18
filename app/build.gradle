@@ -1,0 +1,250 @@
+import com.android.build.gradle.tasks.BundleAar
+
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.compose.compiler)
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+    id 'androidx.navigation.safeargs.kotlin'
+    //alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.google.devtools.ksp)
+    alias(libs.plugins.roborazzi)
+    alias(libs.plugins.secrets)
+}
+
+android {
+    namespace 'com.siffmember.info'
+    compileSdk = 37
+
+    defaultConfig {
+        applicationId "com.siffmember.info"
+        minSdk = 28
+        targetSdk = 37
+        versionCode 146
+        versionName "3.2.6"
+        multiDexEnabled true
+        ndk {
+            //noinspection ChromeOsAbiSupport
+            abiFilters "armeabi-v7a", "arm64-v8a"
+        }
+        applicationVariants.configureEach { variant ->
+            variant.outputs.configureEach {
+                outputFileName =
+                        "TribeOne_v${variant.versionName}_${variant.buildType.name}.apk"
+            }
+        }
+        tasks.withType(BundleAar).configureEach {
+            archiveFileName.set("TribeOne_v${android.defaultConfig.versionName}.aab")
+        }
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+
+        buildConfigField "String", "GEMINI_API_KEY", "\"AIzaSyClA8xQoh8Ln7j8XhE69xnzvTp3WBe3jPU\""
+        //buildConfigField "String", "GEMINI_API_KEY", "\"AIzaSyCbB7P3UZzjWyH31Lji8_AXNdvWClkDMj8\"" // Free key from default gemini project
+    }
+
+    signingConfigs {
+        release {
+            storeFile rootProject.file("app/keystore.jks")
+            storePassword 'siff3d++'
+            keyAlias 'siffmember'
+            keyPassword 'siff3d++'
+        }
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            firebaseCrashlytics {
+                mappingFileUploadEnabled false
+            }
+             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            firebaseCrashlytics {
+                mappingFileUploadEnabled false
+            }
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        //noinspection GrDeprecatedAPIUsage
+        jvmTarget = '17'
+    }
+    buildFeatures {
+        buildConfig = true
+        compose true
+        viewBinding true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion '1.5.15'
+    }
+    packagingOptions {
+        resources {
+            excludes += [
+                    'META-INF/*.kotlin_module',
+                    'META-INF/DEPENDENCIES',
+                    'META-INF/INDEX.LIST'
+            ]
+        }
+        jniLibs {
+            useLegacyPackaging = true
+            pickFirsts += [
+                    'lib/**/libc++_shared.so'
+            ]
+        }
+    }
+    /*packagingOptions {
+        resources {
+            excludes += ['META-INF/*.kotlin_module', 'META-INF/DEPENDENCIES', 'META-INF/INDEX.LIST']
+        }
+        jniLibs {
+            useLegacyPackaging = true
+            pickFirsts += ['lib/x86/libc++_shared.so', 'lib/x86_64/libc++_shared.so', 'lib/armeabi-v7a/libc++_shared.so', 'lib/arm64-v8a/libc++_shared.so']
+        }
+    }*/
+    bundle {
+        abi {
+            enableSplit = true
+        }
+    }
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+
+}
+
+dependencies {
+
+    implementation libs.androidx.core.ktx
+    implementation libs.androidx.lifecycle.runtime.ktx
+    implementation libs.androidx.activity.compose
+    implementation platform(libs.androidx.compose.bom)
+    implementation libs.androidx.ui
+    implementation libs.androidx.ui.graphics
+    implementation libs.androidx.ui.tooling.preview
+    implementation libs.androidx.material3
+    implementation libs.androidx.appcompat
+    implementation libs.material
+    implementation libs.androidx.annotation
+    implementation libs.androidx.constraintlayout
+    implementation libs.androidx.lifecycle.livedata.ktx
+    implementation libs.androidx.lifecycle.viewmodel.ktx
+    implementation libs.androidx.navigation.fragment.ktx
+    implementation libs.androidx.navigation.ui.ktx
+    implementation libs.androidx.activity
+    implementation(libs.androidx.compose.material.icons.core)
+    implementation(libs.androidx.compose.material.icons.extended)
+
+    implementation libs.androidx.viewpager2
+    implementation libs.androidx.fragment.ktx
+    implementation libs.androidx.lifecycle.viewmodel.ktx.v260 // Check for the latest version
+
+    // Room dependencies
+    implementation libs.androidx.room.runtime
+    annotationProcessor libs.androidx.room.compiler // For Java
+    //noinspection KaptUsageInsteadOfKsp
+    kapt libs.androidx.room.compiler // For Kotlin
+    implementation libs.androidx.room.ktx
+
+    // Background components
+    implementation libs.androidx.work.runtime.ktx
+    implementation libs.androidx.work.runtime
+
+    implementation project(':core') // Check for the latest version
+    implementation project(':pdfViewer')
+    implementation project(':mobilertc')
+
+    //noinspection UseTomlInstead
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    // Import the BoM for the Firebase platform
+    implementation platform(libs.firebase.bom)
+    implementation libs.firebase.auth
+    implementation libs.firebase.firestore
+    implementation libs.firebase.analytics
+    implementation libs.firebase.crashlytics
+    implementation libs.firebase.messaging
+    implementation libs.firebase.storage
+
+    implementation(libs.androidx.credentials)
+    implementation(libs.androidx.credentials.play.services.auth)
+    implementation(libs.googleid)
+
+    //ccp editText
+    implementation libs.ccp
+    //loading button
+    implementation libs.loading.button.android
+
+    implementation libs.poi
+    implementation libs.poi.ooxml
+    implementation libs.xmlbeans
+    implementation libs.commons.collections4
+
+    //Navigation component
+    implementation libs.androidx.navigation.fragment.ktx.v250
+    implementation libs.androidx.navigation.ui.ktx.v250
+
+    implementation libs.play.services.auth
+    implementation libs.google.api.services.sheets
+    implementation libs.google.api.services.drive
+    implementation libs.google.http.client.jackson2
+    implementation libs.easypermissions
+
+    implementation libs.retrofit
+    implementation libs.converter.gson
+    implementation libs.logging.interceptor
+
+    implementation libs.glide
+    //noinspection KaptUsageInsteadOfKsp
+    kapt libs.compiler
+    implementation libs.gson
+
+    implementation libs.androidx.room.runtime.v284
+    implementation libs.androidx.room.ktx.v284
+    //noinspection KaptUsageInsteadOfKsp
+    kapt libs.androidx.room.compiler.v284
+
+    // SQLite compatibility libraries
+    implementation libs.androidx.sqlite.framework
+    implementation libs.androidx.sqlite
+    implementation libs.androidx.sqlite.ktx
+
+    // Secure key storage
+    implementation libs.androidx.security.crypto
+    implementation libs.android.database.sqlcipher.v440
+
+    implementation libs.mpandroidchart
+
+    implementation(libs.coil.compose)
+    implementation(libs.converter.moshi)
+
+    testImplementation libs.junit
+    testImplementation(libs.robolectric)
+    testImplementation(libs.roborazzi)
+    testImplementation(libs.roborazzi.compose)
+    testImplementation(libs.roborazzi.junit.rule)
+    androidTestImplementation libs.androidx.junit
+    androidTestImplementation libs.androidx.espresso.core
+    androidTestImplementation platform(libs.androidx.compose.bom)
+    androidTestImplementation libs.androidx.ui.test.junit4
+    debugImplementation libs.androidx.ui.tooling
+    debugImplementation libs.androidx.ui.test.manifest
+
+    //"ksp"(libs.androidx.room.compiler)
+    //"ksp"(libs.moshi.kotlin.codegen)
+}

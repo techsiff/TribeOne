@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/white"
+    android:layout_margin="@dimen/margin3"
+    app:cardCornerRadius="@dimen/margin5"
+    app:cardElevation="@dimen/margin4">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/reply_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:text="user name"
+                android:textSize="@dimen/font14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  •  "
+                android:textColor="@color/blue"
+                android:textSize="@dimen/font14"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/reply_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 hours ago"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/font12" />
+        </LinearLayout>
+
+
+        <!-- Reply Content -->
+        <TextView
+            android:id="@+id/replyContentTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/black"
+            android:text="This is a reply to the discussion."
+            android:autoLink="web"
+            android:linksClickable="true"
+            android:textSize="@dimen/font13" />
+
+        <!-- Reply Timestamp (Optional) -->
+        <TextView
+            android:id="@+id/replyTimestampTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Timestamp"
+            android:textColor="@color/intro_desc"
+            android:textSize="@dimen/font12" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

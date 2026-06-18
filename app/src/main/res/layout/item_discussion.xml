@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardViewDiscussion"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/white"
+    android:layout_margin="@dimen/margin3"
+    app:cardCornerRadius="@dimen/margin5"
+    app:cardElevation="@dimen/margin3">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/post_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User Name"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/font15"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  •  "
+                android:textColor="@color/blue"
+                android:textSize="@dimen/font15"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/post_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 hours ago"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/font15" />
+        </LinearLayout>
+
+        <!-- Discussion Title -->
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Discussion Title"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font14"
+            android:textStyle="bold" />
+
+        <!-- Discussion Content -->
+        <TextView
+            android:id="@+id/contentTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/black"
+            android:text="This is the content of the discussion."
+            android:autoLink="web"
+            android:linksClickable="true"
+            android:maxLines="4"
+            android:ellipsize="end"
+            android:scrollbars="vertical"
+            android:scrollbarStyle="insideOverlay"
+            android:textSize="@dimen/font13" />
+
+        <LinearLayout
+            android:id="@+id/reply_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/margin20"
+                android:layout_height="@dimen/margin20"
+                android:layout_margin="@dimen/margin5"
+                android:src="@drawable/ic_reply"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/reply_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin5"
+                android:text="2.5K"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font12"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/app_header_gcp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/headerTitleMU"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/margin5"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:text="Registered Users"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font18"
+                android:textStyle="bold"
+                tools:ignore="RelativeOverlap" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/registered_user_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/app_header_gcp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/searchView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/notes_edit_text_border"
+                android:backgroundTint="@color/colorAccent"
+                android:gravity="top|start"
+                android:hint="Search user..."
+                android:layout_margin="@dimen/margin10"
+                android:imeOptions="actionDone"
+                android:inputType="textMultiLine|textCapSentences"
+                android:minLines="1"
+                android:paddingStart="@dimen/margin10"
+                android:scrollbars="vertical"
+                android:textColor="@color/blue"
+                android:textColorHint="@color/grey"
+                android:textSize="@dimen/font16"
+                tools:ignore="RtlSymmetry" />
+
+
+            <TextView
+                android:id="@+id/users_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin10"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:text=""
+                android:textColor="@color/blue"
+                android:textSize="@dimen/font16"
+                android:textStyle="bold"
+                tools:ignore="RelativeOverlap" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/all_users_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin5"
+                android:layout_marginRight="@dimen/margin5"
+                tools:itemCount="5"
+                tools:listitem="@layout/list_item_manage_users" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

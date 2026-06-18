@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin10"
+            android:text="Enter the parameter details"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/font20"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/param_name_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin10"
+            android:layout_marginTop="@dimen/margin20"
+            android:layout_marginEnd="@dimen/margin10"
+            android:layout_marginBottom="@dimen/margin10"
+            android:background="@drawable/notes_edit_text_border"
+            android:backgroundTint="@color/colorAccent"
+            android:gravity="top|start"
+            android:hint="Parameter Name"
+            android:imeOptions="actionDone"
+            android:inputType="textMultiLine|textCapSentences"
+            android:minLines="1"
+            android:paddingStart="@dimen/margin10"
+            android:scrollbars="vertical"
+            android:textColor="@color/blue"
+            android:textColorHint="@color/grey"
+            android:textSize="@dimen/font16"
+            tools:ignore="RtlSymmetry" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinner_category"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin45"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/margin10"
+            android:layout_marginTop="@dimen/margin20"
+            android:layout_marginEnd="@dimen/margin10"
+            android:layout_marginBottom="@dimen/margin10"
+            android:background="@drawable/custom_spinner_background"
+            android:gravity="left"
+            android:paddingStart="8dp"
+            android:popupBackground="@color/white"
+            android:spinnerMode="dropdown" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/margin5"
+                android:text="This Param Is Mandatory?"
+                android:textColor="@color/intro_title"
+                android:textSize="@dimen/font16"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupParam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/paramYes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/font16" />
+
+                <RadioButton
+                    android:id="@+id/paramNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/font16" />
+            </RadioGroup>
+        </LinearLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_add_announce"
+            style="@style/MyCustomButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin15"
+            android:background="@drawable/button_bg"
+            android:letterSpacing="0"
+            android:text="Add"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font20"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

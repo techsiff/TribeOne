@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/margin10"
+    android:paddingTop="@dimen/margin5"
+    android:paddingRight="@dimen/margin10"
+    android:paddingBottom="@dimen/margin5">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/margin45"
+        android:background="@drawable/bg_chat_sent">
+
+        <TextView
+            android:id="@+id/textChatMessageName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/margin5"
+            android:paddingEnd="@dimen/margin5"
+            android:text=""
+            android:visibility="gone"
+            android:textStyle="bold"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/font13" />
+
+        <TextView
+            android:id="@+id/textChatMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textChatMessageName"
+            android:padding="@dimen/margin5"
+            android:text="dfgfd dfdfd fsdfdsfsdffsfsfsf f sfds jfdslf dolfndsof dfonodnffg "
+            android:textColor="@color/white"
+            android:paddingEnd="@dimen/margin20"
+            android:textSize="@dimen/font13" />
+
+        <TextView
+            android:id="@+id/textChatTimestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textChatMessage"
+            android:layout_gravity="end"
+            android:text="grgrrrrgrgrr"
+            android:textColor="@color/half_white"
+            android:textSize="@dimen/font11" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/parentLayout"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".PdfViewerActivity">
+
+    <!--<androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="4dp"
+        app:titleTextColor="@color/design_default_color_on_primary">
+
+        <TextView
+            android:id="@+id/tvAppBarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false"
+            android:longClickable="false"
+            android:text="@string/pdfView_appName" />
+
+    </androidx.appcompat.widget.Toolbar>-->
+    <RelativeLayout
+        android:id="@+id/app_header_pdf"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin50"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin10"
+            android:gravity="center"
+            android:text="Education PDF"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font20"
+            android:textStyle="bold"
+            tools:ignore="RelativeOverlap" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvAppBarTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin10"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="@dimen/font18"
+        android:textStyle="bold"
+        tools:ignore="RelativeOverlap" />
+
+    <FrameLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.rajat.pdfviewer.PdfRendererView
+            android:id="@+id/pdfView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:pdfView_divider="@drawable/pdf_viewer_divider"
+            app:pdfView_engine="internal"
+            app:pdfView_showDivider="false" />
+
+        <ProgressBar
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminateDrawable="@drawable/pdf_viewer_progress_circle"
+            android:id="@+id/progressBar"
+            android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+            android:visibility="gone" />
+
+    </FrameLayout>
+</LinearLayout>

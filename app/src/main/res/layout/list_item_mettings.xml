@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin5"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/meeting_join"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/users_ll"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/margin5"
+            android:layout_weight="0.9"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/meeting_topic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin5"
+                android:text="Meeting Topic"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font14" />
+
+            <TextView
+                android:id="@+id/meeting_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin5"
+                android:text="Meeting Time"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/font13" />
+
+            <TextView
+                android:id="@+id/meeting_host"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin5"
+                android:layout_marginTop="@dimen/margin2"
+                android:text="Organiser Name"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/font13" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_arrow_forward_gray"
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:layout_margin="@dimen/margin5"
+        android:visibility="invisible"/>
+</LinearLayout>
+
+

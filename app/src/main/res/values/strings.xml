@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">Tribe One</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome to SIFF Member Info"</string>
+    <string name="search_name">"Search by name and city"</string>
+    <string name="search_number">"Search by member phone number"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="ln_proceed">Proceed with your</string>
+    <string name="login_txt">Login</string>
+    <string name="otp_title">Enter verification code sent to phone number</string>
+    <string name="search">Search</string>
+    <string name="add_education">Add Study Material</string>
+    <string name="add_education_guest">Add Guest Study Material</string>
+    <string name="member_title">Membership Details</string>
+    <string name="add_title">Add the user by manually</string>
+    <string name="add_edu_title">Add the education study material</string>
+    <string name="add_op_title">Add the open point</string>
+    <string name="add_title_excel">Manage the users details</string>
+    <string name="member_title_excel">Upload and download the membership details</string>
+    <string name="add_user_btn">Add</string>
+    <string name="register_user_btn">Register</string>
+    <string name="close_op_btn">Close</string>
+    <string name="upload_user_btn">Upload</string>
+    <string name="download_user_btn">Download</string>
+    <string name="notes_edit">Enter the notes</string>
+    <string name="community_reply_edit">Post your reply</string>
+    <string name="name_edit">First Name</string>
+    <string name="name_edit_ln">Last Name</string>
+    <string name="email_edit">Email ID</string>
+    <string name="country_edit">Country</string>
+    <string name="phone_edit">Phone Number</string>
+    <string name="category_edit">Category</string>
+
+    <string name="community_new_title">Create New Community</string>
+    <string name="meeting_new_title">Create New Meeting</string>
+    <string name="select_user_title">Select Users</string>
+    <string name="post">Post</string>
+    <string name="announcements_title">Announcements</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_education">EducationActivity</string>
+    <string name="tab_text_1">Videos</string>
+    <string name="tab_text_2">PDF</string>
+    <string name="video_title">Education Video</string>
+    <string name="pdf_title">Education PDF</string>
+    <string name="title_activity_community_main">CommunityMainActivity</string>
+    <string name="title_chats">Groups</string>
+    <string name="title_category">Category</string>
+    <string name="title_post">Post</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="terms_text">By continuing to use this app you are agreeing to our <u>terms of use</u>.</string>
+
+    <string name="education_title">Learning Centre</string>
+    <string name="open_points">Open Points</string>
+    <string name="member_search">Member Search</string>
+    <string name="add_user">Add Users</string>
+    <string name="appointment_title">Appointment</string>
+    <string name="community_title">Community</string>
+    <string name="contact_title">Seek Help</string>
+    <string name="social_title">Social Media</string>
+    <string name="guest_education_title">Guest Education</string>
+    <string name="meetings_title">Meetings</string>
+    <string name="chat_with_us_title">TribeOne AI</string>
+    <string name="social_post">TribeStream</string>
+
+
+</resources>

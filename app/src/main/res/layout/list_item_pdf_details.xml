@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pdf_cv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin3"
+    card_view:cardBackgroundColor="@color/white"
+    card_view:cardCornerRadius="@dimen/margin5"
+    card_view:cardElevation="@dimen/margin3">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin5"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/margin50"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.2"
+            android:padding="@dimen/margin5">
+
+            <ImageView
+                android:id="@+id/pdf_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_pdf"
+                tools:ignore="ContentDescription" />
+
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/margin5"
+            android:layout_marginBottom="@dimen/margin5"
+            android:layout_weight="0.8"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/pdf_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin5"
+                android:text="2009: No vote for congress save indian family"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font13" />
+
+            <TextView
+                android:id="@+id/pdf_by"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin5"
+                android:layout_marginTop="@dimen/margin5"
+                android:layout_marginBottom="@dimen/margin5"
+                android:text="by Anil Kumar"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/font12" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/delete_pdf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/margin10"
+            android:src="@drawable/ic_delete" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

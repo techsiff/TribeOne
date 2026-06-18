@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.AddEducationVideoActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/app_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/addMembershipTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/margin5"
+                android:gravity="center"
+                android:text="Add Membership Details"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font20"
+                android:textStyle="bold"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageView
+                android:id="@+id/search"
+                android:layout_width="@dimen/margin30"
+                android:layout_height="@dimen/margin30"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/margin10"
+                android:src="@drawable/ic_search"
+                tools:ignore="ContentDescription" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/update_member_sv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/app_header">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/dynamicContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin10"
+                    android:orientation="vertical" />
+
+                <LinearLayout
+                    android:id="@+id/btnAddLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_add"
+                        style="@style/MyCustomButton"
+                        android:layout_width="@dimen/margin150"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/margin10"
+                        android:background="@drawable/button_bg"
+                        android:letterSpacing="0"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font20"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:ignore="MissingConstraints" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

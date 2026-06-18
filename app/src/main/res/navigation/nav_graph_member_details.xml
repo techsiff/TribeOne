@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_auth"
+    app:startDestination="@id/memberOneFragment">
+
+    <fragment
+        android:id="@+id/memberOneFragment"
+        android:name="com.siffmember.info.ui.fragment.MembershipDetailsOneFragment"
+        android:label="fragment_send_otp"
+        tools:layout="@layout/fragment_membership_details_one" >
+        <action
+            android:id="@+id/action_sendOneFragment_to_twoFragment"
+            app:destination="@id/memberTwoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/memberTwoFragment"
+        android:name="com.siffmember.info.ui.fragment.MembershipDetailsTwoFragment"
+        android:label="fragment_verification_otp"
+        tools:layout="@layout/fragment_membership_details_two" >
+        <action
+            android:id="@+id/action_twoFragment_to_threeFragment"
+            app:destination="@id/memberThreeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/memberThreeFragment"
+        android:name="com.siffmember.info.ui.fragment.MembershipDetailsThreeFragment"
+        android:label="fragment_home_page"
+        tools:layout="@layout/fragment_membership_details_three" />
+</navigation>

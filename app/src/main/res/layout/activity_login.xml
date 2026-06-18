@@ -1,0 +1,195 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    android:padding="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/margin150"
+                android:layout_height="@dimen/margin150"
+                app:srcCompat="@drawable/siff_logo" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ln_proceed"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font15" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_txt"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font20" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/phoneNumberContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/ccp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="5dp"
+                app:ccp_autoDetectCountry="false"
+                app:ccp_clickable="false"
+                app:ccp_showFullName="false"
+                app:ccp_showNameCode="false"
+                app:ccp_showPhoneCode="true"
+                app:ccp_textSize="16sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etPhoneNumberRegisterLabel"
+                style="@style/MyTextInputLayoutStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/blue"
+                app:boxBackgroundMode="filled">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPhoneNumberRegister"
+                    style="@style/MyTextInputEditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:hint="Phone Number"
+                    android:inputType="phone"
+                    android:textColor="@color/blue"
+                    android:textColorHint="@color/blue" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogin"
+            style="@style/MyCustomButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin20"
+            android:layout_marginTop="@dimen/margin40"
+            android:layout_marginRight="@dimen/margin20"
+            android:background="@drawable/button_bg"
+
+            android:letterSpacing="0"
+            android:text="@string/login_txt"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font20"
+            android:textStyle="normal"
+            app:layout_constraintTop_toBottomOf="@+id/phoneNumberContainer" />
+
+        <TextView
+            android:id="@+id/continue_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin20"
+
+            android:text="OR"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/font16"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin20"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/continue_txt">
+
+            <LinearLayout
+                android:id="@+id/btn_google_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg_boarder"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/margin25"
+                    android:layout_height="@dimen/margin25"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margin10"
+                    android:src="@drawable/ic_gsign" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+
+                    android:gravity="center"
+                    android:letterSpacing="0"
+                    android:text="Continue With Google"
+                    android:textAllCaps="false"
+                    android:textColor="@color/intro_title"
+                    android:textSize="@dimen/font18"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_login_ep"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin20"
+                android:background="@drawable/button_bg_boarder"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/margin25"
+                    android:layout_height="@dimen/margin25"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margin10"
+                    android:src="@drawable/ic_gsign"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+
+                    android:gravity="center"
+                    android:letterSpacing="0"
+                    android:text="Login With Password"
+                    android:textAllCaps="false"
+                    android:textColor="@color/intro_title"
+                    android:textSize="@dimen/font18"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

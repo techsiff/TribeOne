@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.CommunityMainActivity">
+
+    <!-- App Header -->
+    <RelativeLayout
+        android:id="@+id/app_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/bl_list_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Blocked"
+            android:layout_marginBottom="@dimen/margin5"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font20"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/btnAddTags"
+            android:layout_width="@dimen/margin30"
+            android:layout_height="@dimen/margin30"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin10"
+            android:visibility="invisible"
+            android:src="@drawable/ic_add_circle_white" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/app_header"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Available Meetings"
+            android:layout_margin="@dimen/margin10"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/font16"
+            android:visibility="gone"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/meetings_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:itemCount="6"
+            android:layout_marginStart="@dimen/margin3"
+            android:layout_marginEnd="@dimen/margin3"
+            android:layout_marginTop="@dimen/margin10"
+            tools:listitem="@layout/list_item_mettings" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

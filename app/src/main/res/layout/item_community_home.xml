@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardViewCommunityHome"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/bg"
+        android:layout_margin="@dimen/margin5"
+        android:gravity="center_vertical">
+
+        <com.siffmember.info.ui.view.CircleProfileImageView
+            android:id="@+id/groups_profile_pic"
+            android:layout_width="@dimen/margin50"
+            android:layout_height="@dimen/margin50"
+            android:layout_margin="@dimen/margin5"
+            android:src="@drawable/ic_group_place_holder"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin5"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <!-- Discussion Title -->
+                <TextView
+                    android:id="@+id/titleHomeTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_weight="0.8"
+                    android:maxLines="1"
+                    android:text="Discussion Title"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font14"
+                    android:lines="1"
+                    android:ellipsize="end"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textMessageTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/font11" />
+            </LinearLayout>
+            <!-- Discussion Content -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/sent_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font12" />
+
+                <TextView
+                    android:id="@+id/last_sent_msg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text=""
+                    android:ellipsize="end"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font12" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/open_points_cv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardBackgroundColor="@color/white"
+        card_view:cardCornerRadius="@dimen/margin5"
+        card_view:cardElevation="@dimen/margin3"
+        card_view:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin5"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_toStartOf="@+id/next_op"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/op_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin10"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font16" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/next_op"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_arrow_forward"
+                tools:ignore="ContentDescription" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
+
+

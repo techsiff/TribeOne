@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/titleTag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin10"
+            android:text=""
+            android:textColor="@color/blue"
+            android:textSize="@dimen/font20"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/tag_name_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin10"
+            android:layout_marginTop="@dimen/margin20"
+            android:layout_marginEnd="@dimen/margin10"
+            android:layout_marginBottom="@dimen/margin10"
+            android:background="@drawable/notes_edit_text_border"
+            android:backgroundTint="@color/colorAccent"
+            android:gravity="top|start"
+            android:hint=""
+            android:imeOptions="actionDone"
+            android:inputType="textMultiLine|textCapSentences"
+            android:minLines="1"
+            android:paddingStart="@dimen/margin10"
+            android:scrollbars="vertical"
+            android:textColor="@color/blue"
+            android:textColorHint="@color/grey"
+            android:textSize="@dimen/font16"
+            tools:ignore="RtlSymmetry" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_add_tag"
+            style="@style/MyCustomButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin15"
+            android:background="@drawable/button_bg"
+            android:letterSpacing="0"
+            android:text="Add"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font20"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

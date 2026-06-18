@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/app_header_gc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/update_group_name"
+                android:layout_width="@dimen/margin30"
+                android:layout_height="@dimen/margin30"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/margin10"
+                android:layout_marginBottom="@dimen/margin5"
+                android:src="@drawable/ic_update_name" />
+
+            <ImageView
+                android:id="@+id/delete_group"
+                android:layout_width="@dimen/margin30"
+                android:layout_height="@dimen/margin30"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/margin10"
+                android:layout_marginBottom="@dimen/margin5"
+                android:src="@drawable/ic_delete"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/exit_group"
+                android:layout_width="@dimen/margin30"
+                android:layout_height="@dimen/margin30"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/margin10"
+                android:layout_marginBottom="@dimen/margin5"
+                android:src="@drawable/ic_exit"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/group_edit_sv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/app_header_gc">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/bg"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/margin10"
+                    android:paddingBottom="@dimen/margin10">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin10">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin5"
+                            android:background="@drawable/icon_default_image_bg"
+                            android:padding="@dimen/margin2">
+
+                            <com.siffmember.info.ui.view.CircleProfileImageView
+                                android:id="@+id/profile_image"
+                                android:layout_width="@dimen/margin100"
+                                android:layout_height="@dimen/margin100"
+                                android:src="@drawable/ic_group_place_holder" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/profile_image_edit_btn"
+                            android:layout_width="@dimen/margin40"
+                            android:layout_height="@dimen/margin40"
+                            android:layout_gravity="bottom|right"
+                            android:background="@drawable/icon_default_profile_bg"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="@dimen/margin2"
+                                android:src="@drawable/icon_edit" />
+                        </LinearLayout>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/group_name_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin5"
+                        android:gravity="center"
+                        android:text="@string/community_title"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font18"
+                        android:textStyle="bold"
+                        tools:ignore="RelativeOverlap" />
+
+                    <TextView
+                        android:id="@+id/group_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin5"
+                        android:shadowColor="#80018786"
+                        android:shadowDx="0"
+                        android:shadowDy="0"
+                        android:shadowRadius="1"
+                        android:text="Group 14 members"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/font16" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:background="@color/bg"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/margin10"
+                    android:paddingTop="@dimen/margin10"
+                    android:paddingBottom="@dimen/margin10"
+                    tools:ignore="RtlSymmetry">
+
+                    <TextView
+                        android:id="@+id/group_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/margin5"
+                        android:shadowColor="#80018786"
+                        android:shadowDx="0"
+                        android:shadowDy="0"
+                        android:shadowRadius="1"
+                        android:text="Description"
+                        android:textColor="@color/blue"
+                        android:textSize="@dimen/font14"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/group_by"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:shadowColor="#80018786"
+                        android:shadowDx="0"
+                        android:shadowDy="0"
+                        android:shadowRadius="1"
+                        android:text="Created by"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/font14" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:background="@color/bg"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/margin10">
+
+                    <LinearLayout
+                        android:id="@+id/addUploadUsers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:id="@+id/add_member_edit"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/margin40"
+                                android:layout_height="@dimen/margin40"
+                                android:layout_gravity="bottom|right"
+                                android:layout_margin="@dimen/margin10"
+                                android:background="@drawable/icon_default_profile_bg"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="@dimen/margin2"
+                                    android:src="@drawable/ic_add_member" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:text="Add Member"
+                                android:textColor="@color/blue"
+                                android:textSize="@dimen/font16"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="@dimen/margin5"
+                            android:layout_weight="0.5"
+                            android:gravity="end"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/uploadUser"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/button_bg_boarders"
+                                android:text="Upload Member"
+                                android:textColor="@color/blue"
+                                android:textSize="@dimen/font15"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/list_member_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin10"
+                        android:shadowColor="#80018786"
+                        android:shadowDx="0"
+                        android:shadowDy="0"
+                        android:shadowRadius="1"
+                        android:text="List of Members"
+                        android:textColor="@color/blue"
+                        android:textSize="@dimen/font16"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/community_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/margin5" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

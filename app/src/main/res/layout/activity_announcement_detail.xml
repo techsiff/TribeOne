@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.CommunityMainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <!-- App Header -->
+        <RelativeLayout
+            android:id="@+id/app_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/bl_list_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/margin5"
+                android:text="Announcement"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font20"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/btnDelete"
+                android:layout_width="@dimen/margin30"
+                android:layout_height="@dimen/margin30"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/margin10"
+                android:src="@drawable/ic_delete_white" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/announceLL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/margin10"
+            android:orientation="vertical"
+            android:layout_below="@+id/app_header">
+
+            <TextView
+                android:id="@+id/announce_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin5"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/font16"
+                android:textStyle="bold" />
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/announceScroll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/margin3">
+
+                <TextView
+                    android:id="@+id/announce_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin5"
+                    android:autoLink="web"
+                    android:linksClickable="true"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideOverlay"
+                    android:scrollbars="vertical"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font14" />
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.CommunityMainActivity">
+
+    <!-- App Header -->
+    <RelativeLayout
+        android:id="@+id/app_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btnMeetingAnalytics"
+            android:layout_width="@dimen/margin30"
+            android:layout_height="@dimen/margin30"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/margin10"
+            android:src="@drawable/ic_analytics" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/margin5"
+            android:text="@string/meetings_title"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font20"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/btnRefreshMeeting"
+            android:layout_width="@dimen/margin30"
+            android:layout_height="@dimen/margin30"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin10"
+            android:src="@drawable/ic_refresh" />
+
+        <ImageView
+            android:id="@+id/btnDeleteMeeting"
+            android:layout_width="@dimen/margin30"
+            android:layout_height="@dimen/margin30"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin10"
+            android:src="@drawable/ic_delete" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/meeting_title_ll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:padding="@dimen/margin5"
+        app:layout_constraintBottom_toTopOf="@+id/btnJoinMeetingLL"
+        app:layout_constraintTop_toBottomOf="@+id/app_header">
+
+        <TextView
+            android:id="@+id/meeting_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/margin5"
+            android:text="Meeting Title"
+            android:textColor="@color/intro_title"
+            android:textSize="@dimen/font16" />
+
+        <TextView
+            android:id="@+id/meeting_agenda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/margin5"
+            android:text="Meeting Agenda"
+            android:textColor="@color/intro_desc"
+            android:textSize="@dimen/font14" />
+
+        <LinearLayout
+            android:id="@+id/meeting_members_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/margin10">
+
+            <LinearLayout
+                android:id="@+id/addUploadLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:id="@+id/add_member_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/margin40"
+                        android:layout_height="@dimen/margin40"
+                        android:layout_gravity="bottom|right"
+                        android:layout_margin="@dimen/margin10"
+                        android:background="@drawable/icon_default_profile_bg"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/margin2"
+                            android:src="@drawable/ic_add_member" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Invite Users"
+                        android:textColor="@color/blue"
+                        android:textSize="@dimen/font16"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/uploadUser"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:visibility="invisible"
+                    android:layout_marginEnd="@dimen/margin5"
+                    android:layout_weight="0.5"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_bg_boarders"
+                        android:text="Upload Users"
+                        android:textColor="@color/blue"
+                        android:textSize="@dimen/font15"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/list_member_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin10"
+                android:shadowColor="#80018786"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="1"
+                android:text="List of Participants"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/font16"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/meeting_users_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin5"
+                tools:itemCount="10" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnJoinMeetingLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin5"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/btnJoiningMeeting"
+            style="@style/MyCustomButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin20"
+            android:layout_marginRight="@dimen/margin20"
+            android:background="@drawable/button_bg"
+            android:letterSpacing="0"
+            android:text=""
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font20" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
